@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canberra Modern</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo-link">
+        <img src="logo.png" alt="Canberra Modern Logo" class="logo">
+        </a>
+        <nav id="site-navigation" class="nav-menu" hidden> /*Hidden by default */
+            <button class="hamburger"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="site-navigation"
+            >
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    /*Home page content */
+    <div class="main-container">
+        <section>
+            <h1> Canberra Modern</h1>
+                <h2> Conservation through participation</h2>
+                    <p class= "acknowledgement"> Canberra Modern acknowledges the Ngunnawal and Ngambri peoples as the traditional custodians of the Canberra region, and respects their continuing culture and connection to this land 
+                    </p>
+        </section>
+        <section>
+            <h3> Upcoming Events</h3>
+                <section class="events-carousel" aria-label="Events carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <div class="slide" role="img" aria-label="Event 1: Description">
+                                <img src="event1.jpg" alt="Event 1 image">
+                                    <button class="more-info-btn" aria-label="More info about Event 1">More Info</button>
+                            </div>
+                            <div class="slide" role="img" aria-label="Event 2: Description">
+                                <img src="event2.jpg" alt="Event 2 image">
+                                    <button class="more-info-btn" aria-label="More info about Event 2">More Info</button>
+                            </div>
+                            <div class="slide" role="img" aria-label="Event 3: Description">
+                                <img src="event3.jpg" alt="Event 3 image">
+                                    <button class="more-info-btn" aria-label="More info about Event 3">More Info</button>
+                            </div>               
+                            <button class="nav-btn prev" aria-label="Previous event">‹</button>
+                            <button class="nav-btn next" aria-label="Next event">›</button>
+                            <div class="indicators" role="tablist" aria-label="Event indicators">
+                                <button class="indicator" aria-label="Go to event 1" data-slide="0"></button>
+                                <button class="indicator" aria-label="Go to event 2" data-slide="1"></button>
+                                <button class="indicator" aria-label="Go to event 3" data-slide="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </section>
+        <section>
+            <h3>Latest News</h3>
+                <section>
+                    <img src="news1.jpg" alt="News 1 image">
+                        <div class="news-content">
+                            <h4>News Title 1</h4>
+                                <p>Brief description of news item 1.</p>
+                                /*Expandable news content?*/
+                                    <button class="news-info-btn" aria-label="More info about News 1">More Info</button>
+
+                        </div>
+                </section>
+        </section>
+        <section>
+            <h3>Architecture Tour</h3>
+                <p>Listen and discover the stories behind the design and conservation efforts that preserve Canberra's architectural heritage.</p>
+                /*Play latest broadcast?*/
+                <img src="tour.jpg" alt="Architecture Tour image">
+                <button class="tour-info-btn" aria-label="More info about Architecture Tour">More Info</button>
+        </section>
+    </div>
+
+    <footer>
+        <img src="footer-logo.png" alt="Canberra Modern Footer Logo" class="footer-logo">
+        <p>This website was produced by students in the Faculty of Arts & Design, University of Canberra, 2026
+        </p>
+        <img src="instagram-logo" alt="Instagram Logo" class="social-icon"><a href="https://www.instagram.com/canberra_modern/" target="_blank" rel="noopener noreferrer"></a>
+        <img src="facebook-logo" alt="Facebook Logo" class="social-icon"><a href="https://www.facebook.com/canberramodern/" target="_blank" rel="noopener noreferrer"></a>
+    </footer>
+</body>
+</html>

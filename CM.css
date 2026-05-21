@@ -1,0 +1,347 @@
+/* 
+  Filename: CMstyles.css
+  Purpose: Main stylesheet for Canberra Modernwebsite layout and styling
+  Author: Izzy Quinn
+  Last updated: May 2026
+*/
+
+/* Mobile-first: default styles (small screens) */
+html {
+    font-size: 16px;
+}
+
+:root {
+  --main-color: grey;
+  --display: flex;
+  --padding: 10px;
+  --h1-font: 700 2rem/1.2 'Arial', sans-serif;
+  --h1-color: white;
+  --h2-font: 600 1.5rem/1.2 'Arial', sans-serif;
+  --h2-color: white;
+  --h3-font: 500 1.25rem/1.2 'Arial', sans-serif;
+  --h3-color: white;
+  --paragraph-font: 400 1rem/1.5 'Arial', sans-serif;
+  --body-colour: white;
+
+ 
+}
+
+
+
+body {
+    background-color: var(--main-color);
+    padding: var(--padding);
+    font: var(--paragraph-font);
+    color: var(--body-colour);
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.acknowledgement {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 12px 0;
+}
+
+.nav-menu.active {
+    display: flex; /* Show when active */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  background: #f1f1f1;
+}
+
+.hamburger {
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+
+
+/* Optional: Animate hamburger to X */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+/*End nav menu*/
+
+
+.main-container {
+    display: var(--display);
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.row-container {
+    display: var(--display);
+    flex-direction: row;
+    gap: 16px;
+}
+
+.acknowledgement {
+    font: var(--body-font);
+    color: var(--body-colour);
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font: var(--h1-font);
+    color: var(--h1-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+h2 {
+    font: var(--h2-font);
+    color: var(--h2-color);
+     display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+h3 {
+    font: var(--h3-font);
+    color: var(--h3-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/*Events corousel styles*/
+.events-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.more-info-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background: #333;
+}
+
+
+
+/* Desktop styles (larger screens) */
+@media (min-width: 768px) {
+  :root {
+    --padding: 20px;
+    --h1-font: 700 2.75rem/1.2;
+    --h2-font: 600 2.25rem/1.2;
+    --paragraph-font: 400 1.25rem/1.5;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+
+  .nav-menu ul {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-menu li {
+        border: none;
+        padding: 0;
+    }
+
+  /*Text adjustments desktop*/
+  h1 {
+    font: var(--h1-font);
+
+  }
+
+    h2 {
+    font: var(--h2-font);
+
+  }
+
+    body {
+    padding: var(--padding);
+    font: var(--paragraph-font);
+    
+  }
+
+  .main-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /*Events carousel desktop*/
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .slide {
+    scroll-snap-align: none;
+  }
+}
